@@ -18,6 +18,23 @@
 
 <body>
 
+  <!-- 🔒 PIN SCREEN -->
+<div id="lockScreen">
+  <h2>Enter PIN</h2>
+  <input type="password" id="pinInput">
+  <button onclick="checkPin()">Unlock</button>
+  <p id="error"></p>
+</div>
+
+<!-- 💻 LOADING SCREEN -->
+<div id="loaderScreen" style="display:none;">
+  <h2 id="typingText"></h2>
+</div>
+
+<!-- 🌐 MAIN WEBSITE -->
+<div id="mainContent" style="display:none;">
+  
+
   <!-- HEADER -->
   <header>
     <h1>TRIVEDI HUB</h1>
