@@ -30,3 +30,62 @@ links.forEach(link => {
     }
   });
 });
+
+
+
+
+
+// 🔒 PIN CHECK
+function checkPin(){
+  let pin = document.getElementById("pinInput").value;
+
+  if(pin === "1234"){   // 👉 अपना PIN 
+    document.getElementById("lockScreen").style.display = "none";
+    document.getElementById("loaderScreen").style.display = "flex";
+
+    startLoading(); // 👉 loading start
+  } else {
+    document.getElementById("error").innerText = "Wrong PIN!";
+  }
+}
+
+
+// 💻 LOADING SYSTEM
+let messages = [
+  "Initializing System...",
+  "Connecting to Server...",
+  "Access Granted ✔"
+];
+
+let i = 0;
+let j = 0;
+let currentText = "";
+let speed = 50;
+
+function startLoading(){
+  typeEffect();
+}
+
+function typeEffect(){
+  if(i < messages.length){
+    if(j < messages[i].length){
+      currentText += messages[i].charAt(j);
+      document.getElementById("typingText").innerText = currentText;
+      j++;
+      setTimeout(typeEffect, speed);
+    } else {
+      currentText = "";
+      j = 0;
+      i++;
+      setTimeout(typeEffect, 500);
+    }
+  } else {
+    setTimeout(() => {
+      document.getElementById("loaderScreen").style.display = "none";
+      document.getElementById("mainContent").style.display = "block";
+    }, 500);
+  }
+}
+
+
+
