@@ -185,7 +185,22 @@ body.loaded {
 
 
 
+:root {
+  --bg: #0b1220;
+  --text: white;
+}
 
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.4s;
+}
+
+/* Light Theme */
+.light {
+  --bg: #f1f5f9;
+  --text: #0f172a;
+}
 
 
 
