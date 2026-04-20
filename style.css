@@ -168,7 +168,7 @@ button:hover {
 
 
 
-body {
+  --bg: #2body {
   opacity: 0;
   transform: scale(0.98);
   transition: all 0.8s ease;
@@ -183,18 +183,6 @@ body.loaded {
 
 
 
-.hero h2 {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideUp 1s ease forwards;
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 
 
@@ -205,70 +193,3 @@ body.loaded {
 
 
 
-
-
-:root {
-  --bg: #0b1220;
-  --text: #ffffff;
-  --card: #111827;
-  --nav: #0f172a;
-  --accent: #38bdf8;
-}
-
-/* APPLY EVERYWHERE */
-body {
-  background: var(--bg);
-  color: var(--text);
-  transition: 0.5s;
-}
-
-nav {
-  background: var(--nav);
-}
-
-.card {
-  background: var(--card);
-  color: var(--text);
-}
-
-h1, h2, h3 {
-  color: var(--accent);
-}
-
-/* THEMES */
-
-/* BLUE */
-.blue {
-  --bg: #0b1220;
-  --nav: #0f172a;
-  --card: #111827;
-  --text: #ffffff;
-  --accent: #38bdf8;
-}
-
-/* PURPLE */
-.purple {
-  --bg: #1a0b2e;
-  --nav: #2a1a3f;
-  --card: #24123a;
-  --text: #ffffff;
-  --accent: #a855f7;
-}
-
-/* GREEN */
-.green {
-  --bg: #062e1c;
-  --nav: #064e3b;
-  --card: #022c22;
-  --text: #d1fae5;
-  --accent: #22c55e;
-}
-
-/* RED */
-.red {
-  --bg: #2e0b0b;
-  --nav: #450a0a;
-  --card: #1f1f1f;
-  --text: #fee2e2;
-  --accent: #ef4444;
-}
