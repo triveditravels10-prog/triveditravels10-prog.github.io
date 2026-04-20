@@ -89,3 +89,35 @@ function typeEffect(){
 
 
 
+
+
+
+function setTheme(theme) {
+  document.body.className = theme;
+}
+
+
+
+
+
+
+
+function setTheme(theme) {
+  document.body.className = theme;
+  localStorage.setItem("theme", theme);
+}
+
+window.onload = () => {
+  const saved = localStorage.getItem("theme");
+  if (saved) document.body.className = saved;
+};
+
+
+
+
+
+
+
+
+
+
