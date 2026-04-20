@@ -201,13 +201,74 @@ body.loaded {
 
 
 
-.cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background: #38bdf8;
-  border-radius: 50%;
-  pointer-events: none;
-  filter: blur(10px);
-  transition: 0.1s;
+
+
+
+
+
+
+:root {
+  --bg: #0b1220;
+  --text: #ffffff;
+  --card: #111827;
+  --nav: #0f172a;
+  --accent: #38bdf8;
+}
+
+/* APPLY EVERYWHERE */
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.5s;
+}
+
+nav {
+  background: var(--nav);
+}
+
+.card {
+  background: var(--card);
+  color: var(--text);
+}
+
+h1, h2, h3 {
+  color: var(--accent);
+}
+
+/* THEMES */
+
+/* BLUE */
+.blue {
+  --bg: #0b1220;
+  --nav: #0f172a;
+  --card: #111827;
+  --text: #ffffff;
+  --accent: #38bdf8;
+}
+
+/* PURPLE */
+.purple {
+  --bg: #1a0b2e;
+  --nav: #2a1a3f;
+  --card: #24123a;
+  --text: #ffffff;
+  --accent: #a855f7;
+}
+
+/* GREEN */
+.green {
+  --bg: #062e1c;
+  --nav: #064e3b;
+  --card: #022c22;
+  --text: #d1fae5;
+  --accent: #22c55e;
+}
+
+/* RED */
+.red {
+  --bg: #2e0b0b;
+  --nav: #450a0a;
+  --card: #1f1f1f;
+  --text: #fee2e2;
+  --accent: #ef4444;
 }
