@@ -1,1 +1,33 @@
+//
+.header {
+  padding: 10px 15px;
+  background: #111827;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+//
 
+
+//
+.container {
+  backdrop-filter: blur(10px);
+}
+
+.sidebar {
+  background: rgba(31, 41, 55, 0.7);
+}
+
+.chat-box {
+  background: rgba(15, 23, 42, 0.7);
+}
+//
+
+
+
+//
+.messages {
+  scroll-behavior: smooth;
+}
+//
