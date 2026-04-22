@@ -24,3 +24,13 @@ function sendMessage() {
   box.scrollTop = box.scrollHeight;
   document.getElementById("msg").value = "";
 }
+
+
+
+//
+document.getElementById("msg").addEventListener("keypress", function(e) {
+  if(e.key === "Enter") {
+    sendMessage();
+  }
+});
+//
