@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trivedi Connect</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1220;
+  color: white;
+}.header { padding: 15px; background: #111827; text-align: center; font-size: 20px; }
+
+.container { display: flex; height: 90vh; }
+
+.sidebar { width: 30%; background: #1f2937; padding: 10px; overflow-y: auto; }
+
+.chat-list { padding: 10px; border-bottom: 1px solid #374151; cursor: pointer; }
+
+.chat-list:hover { background: #374151; }
+
+.chat-box { width: 70%; display: flex; flex-direction: column; }
+
+.messages { flex: 1; padding: 10px; overflow-y: auto; }
+
+.message { padding: 8px 12px; margin: 5px; border-radius: 10px; max-width: 60%; }
+
+.sent { background: #38bdf8; align-self: flex-end; }
+
+.received { background: #374151; }
+
+.input-box { display: flex; padding: 10px; background: #111827; }
+
+.input-box input { flex: 1; padding: 10px; border-radius: 20px; border: none; }
+
+.input-box button { margin-left: 10px; padding: 10px 15px; border: none; border-radius: 20px; background: #38bdf8; color: white; cursor: pointer; }
+
+.input-box button:hover { background: #0ea5e9; } </style>
+
+</head>
+<body><div class="header">Trivedi Connect</div><div class="container">  <div class="sidebar">
+    <div class="chat-list">User 1</div>
+    <div class="chat-list">User 2</div>
+    <div class="chat-list">User 3</div>
+  </div>  <div class="chat-box">
+    <div class="messages" id="messages"></div><div class="input-box">
+  <input type="text" id="msg" placeholder="Type a message...">
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+  </div></div><script>
+function sendMessage() {
+  let msg = document.getElementById("msg").value;
+  if(msg === "") return;
+
+  let messageDiv = document.createElement("div");
+  messageDiv.className = "message sent";
+  messageDiv.innerText = msg;
+
+  document.getElementById("messages").appendChild(messageDiv);
+  document.getElementById("msg").value = "";
+}
+</script></body>
+</html>
