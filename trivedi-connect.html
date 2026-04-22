@@ -31,17 +31,7 @@
   <button onclick="sendMessage()">Send</button>
 </div>
 
-  </div></div><script>
-function sendMessage() {
-  let msg = document.getElementById("msg").value;
-  if(msg === "") return;
 
-  let messageDiv = document.createElement("div");
-  messageDiv.className = "message sent";
-  messageDiv.innerText = msg;
-
-  document.getElementById("messages").appendChild(messageDiv);
-  document.getElementById("msg").value = "";
-}
-</script></body>
+      <script src="trivedi-connect.js"></script>
+  
 </html>
