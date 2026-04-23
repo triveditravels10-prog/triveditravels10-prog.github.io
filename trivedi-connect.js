@@ -1,3 +1,30 @@
+// Firebase import (CDN)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firestore
+const db = getFirestore(app);
+
+console.log("Firebase Connected ✅");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function sendMessage() {
   let msg = document.getElementById("msg").value;
