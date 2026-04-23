@@ -10,7 +10,7 @@ const db = getFirestore(app);
 
 console.log("Firebase Connected ✅");
 
-
+alert("Firebase Connected ✅");
 
 
 
