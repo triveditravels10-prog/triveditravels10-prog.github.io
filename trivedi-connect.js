@@ -25,7 +25,6 @@ alert("Firebase Connected ✅");
 
 
 
-
 function sendMessage() {
   let msg = document.getElementById("msg").value;
   if(msg === "") return;
