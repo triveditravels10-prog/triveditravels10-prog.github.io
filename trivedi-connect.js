@@ -1,3 +1,18 @@
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCu9pQYnkbGRTVN8798C3ilvrc6Z_EmrH0",
+  authDomain: "trivedi-8d263.firebaseapp.com",
+  projectId: "trivedi-8d263",
+  storageBucket: "trivedi-8d263.firebasestorage.app",
+  messagingSenderId: "531536403649",
+  appId: "1:531536403649:web:daff55e05741e0af0b8840",
+  measurementId: "G-LLBMZYDJ39"
+};
+
+
+
+
 // Firebase import (CDN)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
