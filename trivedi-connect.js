@@ -1,6 +1,5 @@
-
-
-const firebaseConfig = {
+//
+  const firebaseConfig = {
   apiKey: "AIzaSyCu9pQYnkbGRTVN8798C3ilvrc6Z_EmrH0",
   authDomain: "trivedi-8d263.firebaseapp.com",
   projectId: "trivedi-8d263",
@@ -27,7 +26,8 @@ console.log("Firebase Connected ✅");
 
 alert("Firebase Connected ✅");
 
-
+// 🔥 BUTTON FIX
+document.getElementById("sendBtn").addEventListener("click", sendMessage);
 
 
 
