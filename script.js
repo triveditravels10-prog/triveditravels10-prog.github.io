@@ -39,7 +39,7 @@ links.forEach(link => {
 function checkPin(){
   let pin = document.getElementById("pinInput").value;
 
-  if(pin === "0267"){   // 👉 अपना PIN 
+  if(pin === "0267"){   // 👉अपना PIN 
     document.getElementById("lockScreen").style.display = "none";
     document.getElementById("loaderScreen").style.display = "flex";
 
