@@ -11,7 +11,7 @@ const firebaseConfig = {
 
 // 🔥 IMPORT
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, collection, addDoc, onSnapshot, query, orderBy } 
+import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, deleteDoc, doc} 
 from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 // 🔥 INIT
@@ -49,16 +49,22 @@ window.onload = () => {
 // 🔥 REALTIME LISTENER
 const q = query(collection(db, "messages"), orderBy("time"));
 
+
 onSnapshot(q, (snapshot) => {
   let box = document.getElementById("messages");
   box.innerHTML = "";
 
-  snapshot.forEach((doc) => {
-    let data = doc.data();
+  snapshot.forEach((docItem) => {
+    let data = docItem.data();
 
     let messageDiv = document.createElement("div");
     messageDiv.className = "message received";
     messageDiv.innerText = data.text;
+
+    // 🔥 CLICK = DELETE
+    messageDiv.onclick = async () => {
+      await deleteDoc(doc(db, "messages", docItem.id));
+    };
 
     box.appendChild(messageDiv);
   });
