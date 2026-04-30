@@ -15,8 +15,15 @@
 <div class="header">
   <div class="logo">🚀 Trivedi Connect</div>
   <div class="header-icons">
-    🔍 📞 ⋮
+    <span>🔍</span>
+    <span>📞</span>
+    <span>⋮</span>
   </div>
+</div>
+
+<!-- 🔥 BRAND TAGLINE -->
+<div class="brand-tagline">
+  Connect • Chat • Build 🚀
 </div>
 
 <div class="container">
@@ -56,26 +63,28 @@
 
     <!-- CHAT HEADER -->
     <div class="chat-header">
+      <div class="avatar">👤</div>
       <div>
         <h3>User 1</h3>
-        <small>Online</small>
+        <small>Online • Active</small>
       </div>
     </div>
 
     <!-- MESSAGES -->
     <div class="messages" id="messages">
-      <div class="message received">Hello 👋</div>
-      <div class="message sent">Hi!</div>
+      <div class="empty-state">Start chatting 🚀</div>
     </div>
 
-    <!-- INPUT -->
+    <!-- 🔥 INPUT (LEFTY FRIENDLY) -->
     <div class="input-box">
-      <button class="icon-btn">➕</button>
+
+      <!-- SEND BUTTON LEFT -->
+      <button class="send-btn" id="sendBtn">➤</button>
 
       <input type="text" id="msg" placeholder="Message on Trivedi Connect...">
-   
-      
-      <button class="send-btn" id="sendBtn">➤</button>
+
+      <!-- ATTACH RIGHT -->
+      <button class="icon-btn">➕</button>
 
     </div>
 
@@ -84,8 +93,7 @@
 </div>
 
 <!-- JS -->
-
-  <script type="module" src="trivedi-connect.js"></script>
+<script type="module" src="trivedi-connect.js"></script>
 
 </body>
 </html>
