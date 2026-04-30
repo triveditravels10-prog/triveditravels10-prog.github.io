@@ -1,6 +1,4 @@
-body {
-  background: red !important;
-}
+
 
 
 /* 🌌 BODY */
@@ -153,4 +151,10 @@ body {
 @keyframes popIn {
   from { transform: scale(0.7); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
+}
+
+
+
+.container {
+  flex-direction: row-reverse;
 }
