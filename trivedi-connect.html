@@ -13,30 +13,62 @@
 
 <!-- 🔥 HEADER -->
 <div class="header">
-  <div class="logo">🚀 Trivedi Connect</div>
   <div class="header-icons">
     <span>🔍</span>
     <span>📞</span>
     <span>⋮</span>
   </div>
+  <div class="logo">🚀 Trivedi Connect</div>
 </div>
 
-<!-- 🔥 BRAND TAGLINE -->
+<!-- 🔥 TAGLINE -->
 <div class="brand-tagline">
   Connect • Chat • Build 🚀
 </div>
 
 <div class="container">
 
-  <!-- 🔥 SIDEBAR -->
+  <!-- 🔥 CHAT BOX (LEFT SIDE NOW) -->
+  <div class="chat-box">
+
+    <!-- CHAT HEADER -->
+    <div class="chat-header">
+      <div>
+        <h3>User 1</h3>
+        <small>Online • Active</small>
+      </div>
+      <div class="avatar">👤</div>
+    </div>
+
+    <!-- MESSAGES -->
+    <div class="messages" id="messages">
+      <div class="empty-state">Start chatting 🚀</div>
+    </div>
+
+    <!-- 🔥 INPUT (LEFTY FLOW) -->
+    <div class="input-box">
+
+      <!-- SEND BUTTON (LEFT + FIXED ARROW) -->
+      <button class="send-btn" id="sendBtn">⬅</button>
+
+      <input type="text" id="msg" placeholder="Message on Trivedi Connect...">
+
+      <!-- ATTACH -->
+      <button class="icon-btn">➕</button>
+
+    </div>
+
+  </div>
+
+  <!-- 🔥 SIDEBAR (RIGHT SIDE NOW) -->
   <div class="sidebar">
 
     <div class="profile">
-      <div class="avatar">👤</div>
       <div>
         <h4>Your Profile</h4>
         <small>Online</small>
       </div>
+      <div class="avatar">👤</div>
     </div>
 
     <input type="text" placeholder="Search chats..." class="search-box">
@@ -54,38 +86,6 @@
     <div class="chat-list">
       👤 User 3 <br>
       <small>Seen</small>
-    </div>
-
-  </div>
-
-  <!-- 🔥 CHAT BOX -->
-  <div class="chat-box">
-
-    <!-- CHAT HEADER -->
-    <div class="chat-header">
-      <div class="avatar">👤</div>
-      <div>
-        <h3>User 1</h3>
-        <small>Online • Active</small>
-      </div>
-    </div>
-
-    <!-- MESSAGES -->
-    <div class="messages" id="messages">
-      <div class="empty-state">Start chatting 🚀</div>
-    </div>
-
-    <!-- 🔥 INPUT (LEFTY FRIENDLY) -->
-    <div class="input-box">
-
-      <!-- SEND BUTTON LEFT -->
-      <button class="send-btn" id="sendBtn">➤</button>
-
-      <input type="text" id="msg" placeholder="Message on Trivedi Connect...">
-
-      <!-- ATTACH RIGHT -->
-      <button class="icon-btn">➕</button>
-
     </div>
 
   </div>
