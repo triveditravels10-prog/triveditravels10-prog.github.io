@@ -14,7 +14,8 @@
 
 // Firebase import (CDN)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+import { getFirestore, collection, addDoc, onSnapshot, query, orderBy } 
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -75,3 +76,21 @@ document.getElementById("msg").addEventListener("keypress", function(e) {
   }
 });
 //
+const q = query(collection(db, "messages"), orderBy("time"));
+
+onSnapshot(q, (snapshot) => {
+  let box = document.getElementById("messages");
+  box.innerHTML = "";
+
+  snapshot.forEach((doc) => {
+    let data = doc.data();
+
+    let messageDiv = document.createElement("div");
+    messageDiv.className = "message received";
+    messageDiv.innerText = data.text;
+
+    box.appendChild(messageDiv);
+  });
+
+  box.scrollTop = box.scrollHeight;
+});
