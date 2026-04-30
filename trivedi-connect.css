@@ -21,6 +21,11 @@ body {
 }
 
 /* 🔥 CONTAINER */
+
+.container {
+  flex-direction: row-reverse;
+}
+
 .container {
   display: flex;
   height: 90vh;
@@ -81,23 +86,11 @@ body {
 }
 
 
-/* ✅ NEW */
-.sent {
-  background: #38bdf8;
-  margin-right: auto;
-}
 
-.received {
-  background: #374151;
-  margin-left: auto;
-}
 
 /* 🔥 INPUT */
 .input-box {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background: rgba(17, 24, 39, 0.8);
+  flex-direction: row-reverse;
 }
 
 /* INPUT FIELD */
@@ -156,6 +149,3 @@ body {
 
 
 
-.container {
-  flex-direction: row-reverse;
-}
