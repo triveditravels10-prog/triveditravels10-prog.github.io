@@ -1,4 +1,10 @@
+.container {
+  flex-direction: row-reverse;
+}
 
+.input-box {
+  flex-direction: row-reverse;
+}
 
 
 /* 🌌 BODY */
