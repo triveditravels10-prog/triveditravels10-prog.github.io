@@ -80,15 +80,16 @@ body {
   animation: popIn 0.3s ease;
 }
 
-/* SENT */
+
+/* ✅ NEW */
 .sent {
   background: #38bdf8;
-  margin-left: auto;
+  margin-right: auto;
 }
 
-/* RECEIVED */
 .received {
   background: #374151;
+  margin-left: auto;
 }
 
 /* 🔥 INPUT */
