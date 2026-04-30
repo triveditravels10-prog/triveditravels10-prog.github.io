@@ -21,14 +21,10 @@ body {
 }
 
 /* 🔥 CONTAINER */
-
-.container {
-  flex-direction: row-reverse;
-}
-
 .container {
   display: flex;
   height: 90vh;
+  flex-direction: row-reverse;
   backdrop-filter: blur(15px);
 }
 
@@ -90,7 +86,11 @@ body {
 
 /* 🔥 INPUT */
 .input-box {
+  display: flex;
   flex-direction: row-reverse;
+  align-items: center;
+  padding: 10px;
+  background: rgba(17, 24, 39, 0.8);
 }
 
 /* INPUT FIELD */
