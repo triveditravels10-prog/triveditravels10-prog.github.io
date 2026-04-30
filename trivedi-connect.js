@@ -1,5 +1,5 @@
-//
-  const firebaseConfig = {
+// 🔥 CONFIG
+const firebaseConfig = {
   apiKey: "AIzaSyCu9pQYnkbGRTVN8798C3ilvrc6Z_EmrH0",
   authDomain: "trivedi-8d263.firebaseapp.com",
   projectId: "trivedi-8d263",
@@ -9,55 +9,44 @@
   measurementId: "G-LLBMZYDJ39"
 };
 
-
-
-
-// Firebase import (CDN)
+// 🔥 IMPORT
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getFirestore, collection, addDoc, onSnapshot, query, orderBy } 
 from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-// Initialize Firebase
+// 🔥 INIT
 const app = initializeApp(firebaseConfig);
-
-// Initialize Firestore
 const db = getFirestore(app);
-
-console.log("Firebase Connected ✅");
 
 alert("Firebase Connected ✅");
 
-// 🔥 BUTTON FIX
-document.getElementById("sendBtn").addEventListener("click", sendMessage);
-
-
-
-
-
-
-
-
-
-
-
-
-function sendMessage() {
+// 🔥 SEND MESSAGE
+async function sendMessage() {
   let msg = document.getElementById("msg").value;
   if(msg === "") return;
 
-  let box = document.getElementById("messages");
+  document.getElementById("msg").value = "";
 
+  await addDoc(collection(db, "messages"), {
+    text: msg,
+    time: Date.now()
+  });
+}
 
+// 🔥 LOAD AFTER PAGE READY
+window.onload = () => {
 
+  document.getElementById("sendBtn").addEventListener("click", sendMessage);
 
+  document.getElementById("msg").addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+      sendMessage();
+    }
+  });
 
-//
-document.getElementById("msg").addEventListener("keypress", function(e) {
-  if(e.key === "Enter") {
-    sendMessage();
-  }
-});
-//
+};
+
+// 🔥 REALTIME LISTENER
 const q = query(collection(db, "messages"), orderBy("time"));
 
 onSnapshot(q, (snapshot) => {
