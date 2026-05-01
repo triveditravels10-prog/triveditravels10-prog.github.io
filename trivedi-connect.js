@@ -76,7 +76,10 @@ onSnapshot(q, (snapshot) => {
 
     let messageDiv = document.createElement("div");
     messageDiv.className = "message received";
-    messageDiv.innerText = data.name + ": " + data.text;
+    messageDiv.innerHTML = `
+  <strong>${data.name}</strong><br>
+  ${data.text}
+`;
     // 🔥 CLICK = DELETE
     messageDiv.onclick = async () => {
       await deleteDoc(doc(db, "messages", docItem.id));
