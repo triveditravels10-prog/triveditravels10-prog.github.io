@@ -19,7 +19,8 @@ from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 // 🔥 INIT
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 alert("Firebase Connected ✅");
 
 // 🔥 SEND MESSAGE
