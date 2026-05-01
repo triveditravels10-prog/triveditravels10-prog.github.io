@@ -1,3 +1,33 @@
+.container {
+  display: flex;
+  height: 90vh;
+  flex-direction: row;
+}
+
+.sidebar {
+  width: 30%;
+  order: 1;
+}
+
+.chat-box {
+  width: 70%;
+  order: 2;
+}
+
+
+.input-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+
+
+
+
+
+
 
 
 
