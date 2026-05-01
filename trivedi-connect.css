@@ -10,11 +10,12 @@ body {
 /* 🔥 HEADER */
 .header {
   padding: 12px 18px;
-  background: rgba(17, 24, 39, 0.8);
-  backdrop-filter: blur(12px);
+  background: rgba(10, 15, 25, 0.9);
+  backdrop-filter: blur(15px);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 /* 🔥 CONTAINER */
