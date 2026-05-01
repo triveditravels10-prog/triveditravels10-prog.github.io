@@ -33,7 +33,8 @@ async function sendMessage() {
   await addDoc(collection(db, "messages"), {
     text: msg,
     time: Date.now(),
-    sender: "user" 
+    sender: auth.currentUser.uid,
+    name: auth.currentUser.displayName
   });
 }
 
@@ -75,8 +76,7 @@ onSnapshot(q, (snapshot) => {
 
     let messageDiv = document.createElement("div");
     messageDiv.className = "message received";
-    messageDiv.innerText = data.text;
-
+    messageDiv.innerText = data.name + ": " + data.text;
     // 🔥 CLICK = DELETE
     messageDiv.onclick = async () => {
       await deleteDoc(doc(db, "messages", docItem.id));
