@@ -29,7 +29,7 @@ async function sendMessage() {
 
   await addDoc(collection(db, "messages"), {
     text: msg,
-    time: Date.now()
+    time: Date.now(),
     sender: "user" 
   });
 }
