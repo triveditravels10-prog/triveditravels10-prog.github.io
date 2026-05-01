@@ -47,7 +47,7 @@ async function login() {
     alert("Login failed ❌");
   }
 }
-
+window.login = login;
 
 // 🔥 LOAD AFTER PAGE READY
 window.onload = () => {
