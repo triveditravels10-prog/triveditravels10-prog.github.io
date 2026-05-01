@@ -37,6 +37,18 @@ async function sendMessage() {
   });
 }
 
+// 🔥 LOGIN FUNCTION 
+async function login() {
+  try {
+    await signInWithPopup(auth, provider);
+    alert("Login successful ✅");
+  } catch (error) {
+    console.log(error);
+    alert("Login failed ❌");
+  }
+}
+
+
 // 🔥 LOAD AFTER PAGE READY
 window.onload = () => {
 
