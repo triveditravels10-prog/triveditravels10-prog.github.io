@@ -79,6 +79,21 @@ body {
   animation: popIn 0.3s ease;
 }
 
+/* 🔥 USER vs BOT MESSAGE */
+.message.user {
+  background: #38bdf8;
+  color: black;
+  margin-left: auto;
+  border-radius: 15px 15px 0 15px;
+}
+
+.message.bot {
+  background: rgba(255,255,255,0.1);
+  margin-right: auto;
+  border-radius: 15px 15px 15px 0;
+}
+
+
 /* 🔥 INPUT */
 .input-box {
   display: flex;
