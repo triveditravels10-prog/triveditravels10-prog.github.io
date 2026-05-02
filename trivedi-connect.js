@@ -25,6 +25,11 @@ alert("Firebase Connected ✅");
 
 // 🔥 SEND MESSAGE
 async function sendMessage() {
+  //
+  if (!auth.currentUser) {
+  alert("Login first!");
+  return;
+}
   let msg = document.getElementById("msg").value;
   if(msg === "") return;
 
