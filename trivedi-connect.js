@@ -75,7 +75,11 @@ onSnapshot(q, (snapshot) => {
     let data = docItem.data();
 
     let messageDiv = document.createElement("div");
-    messageDiv.className = "message received";
+    if (auth.currentUser && data.sender === auth.currentUser.uid) {
+  messageDiv.className = "message user";
+} else {
+  messageDiv.className = "message bot";
+}
     messageDiv.innerHTML = `
   <strong>${data.name}</strong><br>
   ${data.text}
