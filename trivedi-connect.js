@@ -15,6 +15,7 @@ import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, deleteDoc
 from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 import { getAuth, signInWithPopup, GoogleAuthProvider } 
 from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { setDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 // 🔥 INIT
 const app = initializeApp(firebaseConfig);
