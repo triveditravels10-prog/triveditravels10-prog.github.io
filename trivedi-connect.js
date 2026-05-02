@@ -47,14 +47,27 @@ async function sendMessage() {
 // 🔥 LOGIN FUNCTION 
 async function login() {
   try {
-    await signInWithPopup(auth, provider);
+    const result = await signInWithPopup(auth, provider);
+    const user = result.user;
+
+    // 🔥 USER DATA SAVE
+    await setDoc(doc(db, "users", user.uid), {
+      name: user.displayName,
+      email: user.email,
+      photo: user.photoURL,
+      bio: "Hey, I am using Trivedi Connect 🚀"
+    });
+
     alert("Login successful ✅");
+
   } catch (error) {
     console.log(error);
-    alert("Login failed ❌");
+    alert(error.message);
   }
 }
+
 window.login = login;
+
 
 // 🔥 LOAD AFTER PAGE READY
 window.onload = () => {
