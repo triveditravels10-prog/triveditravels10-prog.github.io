@@ -113,3 +113,24 @@ onSnapshot(q, (snapshot) => {
 
   box.scrollTop = box.scrollHeight;
 });
+
+
+
+
+//
+async function loadProfile() {
+  if (!auth.currentUser) return;
+
+  const ref = doc(db, "users", auth.currentUser.uid);
+  const snap = await getDoc(ref);
+
+  if (snap.exists()) {
+    const data = snap.data();
+
+    document.getElementById("username").innerText = data.name;
+    document.getElementById("bio").innerText = data.bio;
+    document.getElementById("dp").src = data.photo;
+  }
+}
+
+
