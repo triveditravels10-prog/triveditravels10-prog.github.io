@@ -59,6 +59,7 @@ async function login() {
     });
 
     alert("Login successful ✅");
+    loadProfile();
 
   } catch (error) {
     console.log(error);
