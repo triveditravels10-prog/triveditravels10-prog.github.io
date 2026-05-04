@@ -101,3 +101,11 @@
 .send-btn:active {
   transform: scale(0.9);
 }
+
+.time {
+  font-size: 10px;
+  opacity: 0.6;
+  margin-top: 3px;
+  text-align: right;
+}
+
