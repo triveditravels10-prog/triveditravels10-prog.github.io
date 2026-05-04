@@ -153,3 +153,13 @@
   text-align: center;
   margin-top: 20px;
 }
+
+
+.chat-list.active {
+  background: rgba(56,189,248,0.2);
+  border-left: 3px solid #38bdf8;
+}
+
+.chat-list:active {
+  transform: scale(0.97);
+}
