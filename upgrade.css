@@ -1,1 +1,103 @@
 
+/* 🔥 RIGHT SIDEBAR PREMIUM */
+.sidebar {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(25px);
+  border-left: 1px solid rgba(255,255,255,0.08);
+  box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  width: 25%;
+  transition: 0.3s ease;
+}
+
+/* 🔥 CHAT AREA BALANCE */
+.chat-box {
+  width: 75%;
+  transition: 0.3s ease;
+}
+
+/* 🔥 PROFILE BOX UPGRADE */
+.profile-box {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: black;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* 🔥 PROFILE IMAGE */
+#dp {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover; /* 👈 important fix */
+}
+
+/* 🔥 SECTION TITLE */
+.section-title {
+  font-size: 12px;
+  opacity: 0.5;
+  margin: 10px 5px;
+}
+
+/* 🔥 CHAT LIST IMPROVE */
+.chat-list {
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.chat-list:hover {
+  background: rgba(56,189,248,0.15);
+  transform: translateX(6px);
+}
+
+/* 🔥 SEARCH BOX MODERN */
+.search-box {
+  width: 90%;
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  background: rgba(255,255,255,0.05);
+  color: white;
+  outline: none; /* 👈 clean look */
+}
+
+/* 🔥 SIDEBAR HOVER EFFECT (light, not heavy) */
+.sidebar:hover {
+  transform: scale(1.005); /* 👈 subtle */
+}
+
+/* 🔥 MESSAGE STYLE IMPROVE */
+.message {
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* 🔥 USER MESSAGE GLOW */
+.message.user {
+  box-shadow: 0 0 10px rgba(56,189,248,0.4);
+}
+
+/* 🔥 NAME STYLE */
+.message strong {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* 🔥 INPUT MODERN LOOK */
+.input-box input {
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+/* 🔥 INPUT PLACEHOLDER */
+.input-box input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+/* 🔥 BUTTON PRESS EFFECT */
+.send-btn:active {
+  transform: scale(0.9);
+}
