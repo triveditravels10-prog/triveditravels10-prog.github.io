@@ -148,3 +148,8 @@
 .send-btn {
   background: linear-gradient(135deg, #38bdf8, #0ea5e9);
 }
+.empty-state {
+  opacity: 0.5;
+  text-align: center;
+  margin-top: 20px;
+}
