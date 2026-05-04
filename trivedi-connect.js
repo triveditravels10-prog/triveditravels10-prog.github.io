@@ -100,9 +100,12 @@ onSnapshot(q, (snapshot) => {
 } else {
   messageDiv.className = "message bot";
 }
-    messageDiv.innerHTML = `
+    const time = new Date(data.time).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+
+messageDiv.innerHTML = `
   <strong>${data.name}</strong><br>
   ${data.text}
+  <div class="time">${time}</div>
 `;
     // 🔥 CLICK = DELETE
     messageDiv.onclick = async () => {
