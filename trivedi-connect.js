@@ -80,7 +80,12 @@ window.onload = () => {
       sendMessage();
     }
   });
-
+document.querySelectorAll(".chat-list").forEach(item => {
+  item.addEventListener("click", () => {
+    document.querySelectorAll(".chat-list").forEach(el => el.classList.remove("active"));
+    item.classList.add("active");
+  });
+});
 };
 
 // 🔥 REALTIME LISTENER
