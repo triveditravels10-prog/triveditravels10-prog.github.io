@@ -165,5 +165,30 @@
 }
 
 
+/* 🔥 CHAT BUBBLE TAIL */
+.message {
+  position: relative;
+}
 
+/* 👉 USER (right side tail) */
+.message.user::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: 10px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent #38bdf8;
+}
+
+/* 👉 OTHER (left side tail) */
+.message.bot::after {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 10px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent rgba(255,255,255,0.1) transparent transparent;
+}
                              
