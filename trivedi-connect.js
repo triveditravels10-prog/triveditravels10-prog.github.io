@@ -112,10 +112,13 @@ messageDiv.innerHTML = `
   ${data.text}
   <div class="time">${time}</div>
 `;
-    // 🔥 CLICK = DELETE
-    messageDiv.onclick = async () => {
-      await deleteDoc(doc(db, "messages", docItem.id));
-    };
+
+    // 🔥 ONLY OWN MESSAGE DELETE
+if (auth.currentUser && data.sender === auth.currentUser.uid) {
+  messageDiv.onclick = async () => {
+    await deleteDoc(doc(db, "messages", docItem.id));
+  };
+}
 
     box.appendChild(messageDiv);
   });
