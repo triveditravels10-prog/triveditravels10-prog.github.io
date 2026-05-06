@@ -162,3 +162,22 @@ async function loadProfile() {
 }
 
 
+
+async function postStatus() {
+
+  if (!auth.currentUser) {
+    alert("Login first!");
+    return;
+  }
+
+  let text = prompt("Write your status...");
+
+  if (!text) return;
+
+  await addDoc(collection(db, "status"), {
+    text: text,
+    name: auth.currentUser.displayName,
+    time: Date.now()
+  });
+
+}
