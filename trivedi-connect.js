@@ -113,11 +113,27 @@ messageDiv.innerHTML = `
   <div class="time">${time}</div>
 `;
 
-    // 🔥 ONLY OWN MESSAGE DELETE
+    // 🔥 LONG PRESS DELETE (ONLY OWN MESSAGE)
 if (auth.currentUser && data.sender === auth.currentUser.uid) {
-  messageDiv.onclick = async () => {
-    await deleteDoc(doc(db, "messages", docItem.id));
+
+  let pressTimer;
+
+  messageDiv.onmousedown = () => {
+    pressTimer = setTimeout(async () => {
+
+      let confirmDelete = confirm("Delete this message?");
+
+      if (confirmDelete) {
+        await deleteDoc(doc(db, "messages", docItem.id));
+      }
+
+    }, 700);
   };
+
+  messageDiv.onmouseup = () => clearTimeout(pressTimer);
+  messageDiv.onmouseleave = () => clearTimeout(pressTimer);
+
+}
 }
 
     box.appendChild(messageDiv);
