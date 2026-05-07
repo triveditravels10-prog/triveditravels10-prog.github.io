@@ -1,115 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trivedi Connect</title>
 
-<link rel="stylesheet" href="trivedi-connect.css">
-<link rel="stylesheet" href="upgrade.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Trivedi Connect</title>
+
+  <link rel="stylesheet" href="trivedi-connect.css">
+  <link rel="stylesheet" href="upgrade.css">
 </head>
 
 <body>
 
-<!-- 🔥 HEADER -->
-<div class="header">
-  <div class="header-icons">
-    <span>🔍</span>
-    <span>📞</span>
-    <span>⋮</span>
-    <button onclick="login()">Login</button>
+  <!-- 🔥 HEADER -->
+  <div class="header">
+
+    <div class="header-icons">
+      <span>🔍</span>
+      <span>📞</span>
+      <span>⋮</span>
+
+      <button onclick="login()">
+        Login
+      </button>
+    </div>
+
+    <div class="logo">
+      🚀 Trivedi Connect
+    </div>
+
   </div>
-  <div class="logo">🚀 Trivedi Connect</div>
-</div>
 
-<!-- 🔥 TAGLINE -->
-<div class="brand-tagline">
-  Connect • Chat • Build 🚀
-</div>
+  <!-- 🔥 TAGLINE -->
+  <div class="brand-tagline">
+    Connect • Chat • Build 🚀
+  </div>
 
-<div class="container">
+  <!-- 🔥 MAIN -->
+  <div class="container">
 
-  <!-- 🔥 CHAT BOX (LEFT SIDE NOW) -->
-  <div class="chat-box">
+    <!-- 🔥 CHAT BOX -->
+    <div class="chat-box">
 
-    <!-- CHAT HEADER -->
-    <div class="chat-header">
-      <div>
-        <h3>User 1</h3>
-        <small>Online • Active</small>
+      <!-- 🔥 CHAT HEADER -->
+      <div class="chat-header">
+
+        <div>
+          <h3>Global Chat</h3>
+          <small>Realtime Messaging</small>
+        </div>
+
+        <div class="avatar">
+          👤
+        </div>
+
       </div>
-      <div class="avatar">👤</div>
-    </div>
 
-    <!-- MESSAGES -->
-    <div class="messages" id="messages">
-      <div class="empty-state">Start chatting 🚀</div>
-    </div>
+      <!-- 🔥 MESSAGES -->
+      <div class="messages" id="messages">
 
-    <!-- 🔥 INPUT (LEFTY FLOW) -->
-    <div class="input-box">
+        <div class="empty-state">
+          Start chatting 🚀
+        </div>
 
-      <!-- SEND BUTTON (LEFT + FIXED ARROW) -->
-      <button class="send-btn" id="sendBtn"> ◀️ </button>
-
-      <input type="text" id="msg" placeholder="Message on Trivedi Connect...">
-
-      <!-- ATTACH -->
-      <button class="icon-btn">➕</button>
-
-    </div>
-
-  </div>
-
-  <!-- 🔥 SIDEBAR (RIGHT SIDE NOW) -->
-  <div class="sidebar">
-    <div class="profile-box" id="profileBox">
-  <img id="dp" src="" width="40">
-  <div>
-    <h4 id="username">Guest</h4>
-    <small id="bio">No bio</small>
-  </div>
-</div>
-    <input type="text" placeholder="Search chats..." class="search-box">
-
-
-<div class="status-section">
-  <h4>Status</h4>
-  <button onclick="postStatus()">+ Add</button>
-  <div id="statusBox"></div>
-</div>
-    
-    <div class="profile">
-      <div>
-        <h4>Your Profile</h4>
-        <small>Online</small>
       </div>
-      <div class="avatar">👤</div>
+
+      <!-- 🔥 INPUT -->
+      <div class="input-box">
+
+        <!-- 🔥 SEND -->
+        <button class="send-btn" id="sendBtn">
+          ◀️
+        </button>
+
+        <!-- 🔥 INPUT -->
+        <input
+          type="text"
+          id="msg"
+          placeholder="Message on Trivedi Connect..."
+        >
+
+        <!-- 🔥 EXTRA -->
+        <button class="icon-btn">
+          ➕
+        </button>
+
+      </div>
+
     </div>
 
-    <input type="text" placeholder="Search chats..." class="search-box">
+    <!-- 🔥 SIDEBAR -->
+    <div class="sidebar">
 
-    <div class="chat-list">
-      👤 User 1 <br>
-      <small>Last message...</small>
-    </div>
+      <!-- 🔥 PROFILE -->
+      <div class="profile-box" id="profileBox">
 
-    <div class="chat-list">
-      👤 User 2 <br>
-      <small>Typing...</small>
-    </div>
+        <img
+          id="dp"
+          src=""
+          width="45"
+          height="45"
+        >
 
-    <div class="chat-list">
-      👤 User 3 <br>
-      <small>Seen</small>
+        <div>
+          <h4 id="username">
+            Guest
+          </h4>
+
+          <small id="bio">
+            No bio
+          </small>
+        </div>
+
+      </div>
+
+      <!-- 🔥 SEARCH -->
+      <input
+        type="text"
+        placeholder="Search chats..."
+        class="search-box"
+      >
+
+      <!-- 🔥 STATUS -->
+      <div class="status-section">
+
+        <h4>Status</h4>
+
+        <button onclick="postStatus()">
+          + Add
+        </button>
+
+        <div id="statusBox"></div>
+
+      </div>
+
+      <!-- 🔥 CHAT LIST -->
+      <div class="chat-list">
+        👤 User 1 <br>
+        <small>Last message...</small>
+      </div>
+
+      <div class="chat-list">
+        👤 User 2 <br>
+        <small>Typing...</small>
+      </div>
+
+      <div class="chat-list">
+        👤 User 3 <br>
+        <small>Seen</small>
+      </div>
+
     </div>
 
   </div>
 
-</div>
-
-<!-- JS -->
-<script type="module" src="trivedi-connect.js"></script>
+  <!-- 🔥 JS -->
+  <script
+    type="module"
+    src="trivedi-connect.js"
+  ></script>
 
 </body>
+
 </html>
