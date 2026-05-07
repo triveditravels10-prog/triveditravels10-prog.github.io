@@ -1,194 +1,108 @@
-
-/* 🔥 RIGHT SIDEBAR PREMIUM */
+/* 🔥 SIDEBAR PREMIUM */
 .sidebar {
   background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(25px);
-  border-left: 1px solid rgba(255,255,255,0.08);
-  box-shadow: -10px 0 30px rgba(0,0,0,0.5);
-  width: 25%;
+
+  border-left: 1px solid rgba(255,255,255,0.05);
+
+  box-shadow: -10px 0 25px rgba(0,0,0,0.3);
+
   transition: 0.3s ease;
 }
 
-/* 🔥 CHAT AREA BALANCE */
+/* 🔥 CHAT AREA */
 .chat-box {
-  width: 75%;
   transition: 0.3s ease;
 }
 
-/* 🔥 PROFILE BOX UPGRADE */
+/* 🔥 PROFILE BOX */
 .profile-box {
   background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+
   color: black;
-  padding: 12px;
-  border-radius: 12px;
+
   font-weight: 500;
 }
 
 /* 🔥 PROFILE IMAGE */
 #dp {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  object-fit: cover; /* 👈 important fix */
+  object-fit: cover;
 }
 
-/* 🔥 SECTION TITLE */
-.section-title {
-  font-size: 12px;
-  opacity: 0.5;
-  margin: 10px 5px;
-}
-
-/* 🔥 CHAT LIST IMPROVE */
-.chat-list {
-  background: rgba(255,255,255,0.03);
-  border-radius: 8px;
-  padding: 10px;
-}
-
-.chat-list:hover {
-  background: rgba(56,189,248,0.15);
-  transform: translateX(6px);
-}
-
-/* 🔥 SEARCH BOX MODERN */
+/* 🔥 SEARCH BOX */
 .search-box {
-  width: 90%;
-  padding: 8px;
-  border-radius: 20px;
-  border: none;
-  background: rgba(255,255,255,0.05);
-  color: white;
-  outline: none; /* 👈 clean look */
+  outline: none;
 }
 
-/* 🔥 SIDEBAR HOVER EFFECT (light, not heavy) */
-.sidebar:hover {
-  transform: scale(1.005); /* 👈 subtle */
-}
-
-/* 🔥 MESSAGE STYLE IMPROVE */
-.message {
-  font-size: 14px;
-  line-height: 1.4;
-  letter-spacing: 0.3px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-
-/* 🔥 USER MESSAGE GLOW */
-.message.user {
-  box-shadow: 0 0 10px rgba(56,189,248,0.4);
-}
-
-/* 🔥 NAME STYLE */
-.message strong {
-  font-size: 12px;
-  opacity: 0.7;
-}
-
-/* 🔥 INPUT MODERN LOOK */
-.input-box input {
-  background: rgba(255,255,255,0.05);
-  color: white;
-}
-
-/* 🔥 INPUT PLACEHOLDER */
-.input-box input::placeholder {
-  color: rgba(255,255,255,0.5);
-}
-
-/* 🔥 BUTTON PRESS EFFECT */
-.send-btn:active {
-  transform: scale(0.9);
-}
-
-.time {
-  font-size: 10px;
-  opacity: 0.6;
-  margin-top: 3px;
-  text-align: right;
-}
-
-
-.chat-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background: rgba(255,255,255,0.03);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-.avatar {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-}
-.messages {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-}
-
-.message {
-  padding: 10px 14px;
-  margin: 6px 0;
-  border-radius: 18px;
-  max-width: 65%;
-}
-.input-box {
-  border-top: 1px solid rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-}
-
-.send-btn {
-  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-}
-.empty-state {
-  opacity: 0.5;
-  text-align: center;
-  margin-top: 20px;
-}
-
-
+/* 🔥 CHAT ACTIVE */
 .chat-list.active {
-  background: rgba(56,189,248,0.2);
+  background: rgba(56,189,248,0.15);
+
   border-left: 3px solid #38bdf8;
 }
 
+/* 🔥 CHAT CLICK EFFECT */
 .chat-list:active {
   transform: scale(0.97);
 }
 
-
-/* 🔥 CHAT BUBBLE TAIL */
+/* 🔥 MESSAGE */
 .message {
   position: relative;
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* 👉 USER (right side tail) */
+/* 🔥 USER MESSAGE TAIL */
 .message.user::after {
   content: "";
+
   position: absolute;
+
   right: -8px;
   top: 10px;
+
   border-width: 8px;
   border-style: solid;
-  border-color: transparent transparent transparent #38bdf8;
+
+  border-color:
+    transparent
+    transparent
+    transparent
+    #38bdf8;
 }
 
-/* 👉 OTHER (left side tail) */
+/* 🔥 BOT MESSAGE TAIL */
 .message.bot::after {
   content: "";
+
   position: absolute;
+
   left: -8px;
   top: 10px;
+
   border-width: 8px;
   border-style: solid;
-  border-color: transparent rgba(255,255,255,0.1) transparent transparent;
+
+  border-color:
+    transparent
+    rgba(255,255,255,0.08)
+    transparent
+    transparent;
 }
-                             
+
+/* 🔥 SEND BUTTON */
+.send-btn {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+}
+
+/* 🔥 BUTTON PRESS */
+.send-btn:active {
+  transform: scale(0.92);
+}
+
+/* 🔥 EMPTY STATE */
+.empty-state {
+  opacity: 0.5;
+  text-align: center;
+}
