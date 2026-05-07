@@ -65,9 +65,13 @@ body {
 .container {
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 90px);
+
+  height: calc(100vh - 120px);
+
   gap: 10px;
   padding: 10px;
+
+  overflow: hidden;
 }
 
 /* 🔥 SIDEBAR */
@@ -393,4 +397,9 @@ body {
 
 .messages {
   min-height: 0;
+}
+
+
+.input-box {
+  flex-shrink: 0;
 }
