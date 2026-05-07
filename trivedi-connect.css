@@ -384,3 +384,13 @@ body {
     opacity: 1;
   }
 }
+
+/* 🔥 FIX INPUT BOX */
+
+.chat-box {
+  overflow: hidden;
+}
+
+.messages {
+  min-height: 0;
+}
