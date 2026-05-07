@@ -5,6 +5,7 @@ body {
   background: linear-gradient(135deg, #0b1220, #1e293b);
   color: white;
   animation: fadeIn 0.8s ease;
+  overflow: hidden;
 }
 
 /* 🔥 HEADER */
@@ -12,18 +13,61 @@ body {
   padding: 12px 18px;
   background: rgba(10, 15, 25, 0.9);
   backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-/* 🔥 CONTAINER */
+/* 🔥 LOGO */
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 🔥 HEADER ICONS */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-icons span {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header-icons span:hover {
+  transform: scale(1.15);
+  color: #38bdf8;
+}
+
+/* 🔥 LOGIN BUTTON */
+.header button {
+  background: #38bdf8;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* 🔥 TAGLINE */
+.brand-tagline {
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* 🔥 MAIN CONTAINER */
 .container {
   display: flex;
-  height: 90vh;
   flex-direction: row;
-  backdrop-filter: blur(15px);
+  height: calc(100vh - 90px);
+  gap: 10px;
+  padding: 10px;
 }
 
 /* 🔥 SIDEBAR */
@@ -31,9 +75,16 @@ body {
   width: 30%;
   background: rgba(20, 25, 35, 0.7);
   backdrop-filter: blur(15px);
-  padding: 10px;
+
+  border-radius: 15px;
+  padding: 12px;
+
   overflow-y: auto;
-  border-radius: 10px;
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+
   animation: slideLeft 0.6s ease;
 }
 
@@ -42,211 +93,294 @@ body {
   width: 70%;
   display: flex;
   flex-direction: column;
+
   background: rgba(10, 15, 25, 0.75);
   backdrop-filter: blur(15px);
-  border-radius: 10px;
+
+  border-radius: 15px;
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+
   animation: slideRight 0.6s ease;
+}
+
+/* 🔥 CHAT HEADER */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 🔥 PROFILE BOX */
+.profile-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px;
+  margin-bottom: 12px;
+
+  background: rgba(255,255,255,0.05);
+
+  border-radius: 12px;
+}
+
+/* 🔥 PROFILE IMAGE */
+#dp {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  border: 2px solid #38bdf8;
+}
+
+/* 🔥 SEARCH */
+.search-box {
+  width: 100%;
+  padding: 10px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 20px;
+
+  margin-bottom: 12px;
+
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+/* 🔥 STATUS */
+.status-section {
+  background: rgba(255,255,255,0.04);
+
+  padding: 10px;
+
+  border-radius: 12px;
+
+  margin-bottom: 12px;
+}
+
+.status-section button {
+  margin-top: 5px;
+
+  background: #38bdf8;
+  color: white;
+
+  border: none;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  cursor: pointer;
 }
 
 /* 🔥 CHAT LIST */
 .chat-list {
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 5px;
+  padding: 12px;
+
+  margin-bottom: 8px;
+
+  border-radius: 12px;
+
   cursor: pointer;
-  transition: 0.3s;
+
+  background: rgba(255,255,255,0.03);
+
+  transition: 0.25s;
 }
 
 .chat-list:hover {
-  background: rgba(255,255,255,0.1);
-  transform: scale(1.03);
+  background: rgba(255,255,255,0.08);
+  transform: translateX(5px);
 }
 
 /* 🔥 MESSAGES */
 .messages {
   flex: 1;
-  padding: 10px;
+
+  padding: 15px;
+
   overflow-y: auto;
+
   scroll-behavior: smooth;
 }
 
 /* 🔥 MESSAGE */
 .message {
-  padding: 8px 12px;
-  margin: 5px;
-  border-radius: 15px;
   max-width: 60%;
-  animation: popIn 0.3s ease;
+
+  padding: 10px 14px;
+
+  margin-bottom: 10px;
+
+  border-radius: 15px;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  animation: popIn 0.25s ease;
 }
 
-/* 🔥 USER vs BOT MESSAGE */
+/* 🔥 USER MESSAGE */
 .message.user {
   background: #38bdf8;
   color: black;
+
   margin-left: auto;
+
   border-radius: 15px 15px 0 15px;
+
+  box-shadow: 0 0 10px rgba(56,189,248,0.4);
 }
 
+/* 🔥 OTHER MESSAGE */
 .message.bot {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.08);
+
   margin-right: auto;
+
   border-radius: 15px 15px 15px 0;
 }
 
+/* 🔥 MESSAGE TIME */
+.time {
+  font-size: 11px;
+  opacity: 0.6;
+
+  margin-top: 4px;
+
+  text-align: right;
+}
 
 /* 🔥 INPUT */
 .input-box {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  padding: 10px;
+
+  gap: 10px;
+
+  padding: 12px;
+
   background: rgba(17, 24, 39, 0.8);
+
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-/* INPUT FIELD */
+/* 🔥 INPUT FIELD */
 .input-box input {
   flex: 1;
-  padding: 10px;
-  border-radius: 20px;
+
+  padding: 12px;
+
   border: none;
-  margin: 0 10px;
+  outline: none;
+
+  border-radius: 25px;
+
+  background: rgba(255,255,255,0.05);
+
+  color: white;
 }
 
-/* BUTTONS */
-.send-btn, .icon-btn {
-  padding: 10px;
+.input-box input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+/* 🔥 BUTTONS */
+.send-btn,
+.icon-btn {
+  width: 42px;
+  height: 42px;
+
   border: none;
+
   border-radius: 50%;
+
   cursor: pointer;
-  transition: 0.3s;
+
+  transition: 0.25s;
 }
 
+/* 🔥 SEND BUTTON */
 .send-btn {
   background: #38bdf8;
   color: white;
 }
 
 .send-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px #38bdf8;
+  transform: scale(1.08);
+  box-shadow: 0 0 12px #38bdf8;
 }
 
+/* 🔥 ICON BUTTON */
 .icon-btn {
-  background: #374151;
+  background: rgba(255,255,255,0.08);
   color: white;
 }
 
-/* 🔥 ANIMATIONS */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* 🔥 EMPTY STATE */
+.empty-state {
+  opacity: 0.5;
+  text-align: center;
+  margin-top: 30px;
 }
 
-@keyframes slideLeft {
-  from { transform: translateX(-50px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes slideRight {
-  from { transform: translateX(50px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes popIn {
-  from { transform: scale(0.7); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/////*
-
-
-/* 🔥 GLASS EFFECT UPGRADE */
-.sidebar, .chat-box {
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-  border: 1px solid rgba(255,255,255,0.06);
-}
-
-/* 🔥 HEADER ICON HOVER */
-.header-icons span {
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.header-icons span:hover {
-  transform: scale(1.2);
-  color: #38bdf8;
-}
-
-/* 🔥 MESSAGE TEXT IMPROVE */
-.message {
-  font-size: 14px;
-  line-height: 1.4;
-  letter-spacing: 0.3px;
-}
-
-/* 🔥 USER MESSAGE GLOW */
-.message.user {
-  box-shadow: 0 0 10px rgba(56,189,248,0.4);
-}
-
-/* 🔥 INPUT MODERN LOOK */
-.input-box input {
-  background: rgba(255,255,255,0.05);
-  color: white;
-  outline: none;
-}
-
-/* 🔥 INPUT PLACEHOLDER */
-.input-box input::placeholder {
-  color: rgba(255,255,255,0.5);
-}
-
-/* 🔥 BUTTON PRESS EFFECT */
-.send-btn:active {
-  transform: scale(0.9);
-}
-
-/* 🔥 CHAT LIST SMOOTH HOVER */
-.chat-list {
-  transition: 0.25s;
-}
-
-.chat-list:hover {
-  transform: translateX(5px);
-}
-
-/* 🔥 PROFILE BOX STYLE */
-.profile-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  background: rgba(255,255,255,0.05);
-}
-
-/* 🔥 PROFILE IMAGE ROUND */
-#dp {
-  border-radius: 50%;
-  border: 2px solid #38bdf8;
-}
-
-/* 🔥 SCROLLBAR HIDE (premium feel) */
+/* 🔥 SCROLLBAR */
 ::-webkit-scrollbar {
   width: 0px;
 }
 
+/* 🔥 ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
 
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
