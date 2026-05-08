@@ -222,3 +222,12 @@
     visibility: hidden;
   }
 }
+
+
+#userid {
+  font-size: 11px;
+  color: #38bdf8;
+  opacity: 0.8;
+  margin-top: 2px;
+  letter-spacing: 0.4px;
+}
