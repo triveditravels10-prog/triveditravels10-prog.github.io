@@ -247,6 +247,13 @@ async function loadProfile() {
       bio.innerText = data.bio;
     }
 
+const userid =
+  document.getElementById("userid");
+
+if (userid) {
+  userid.innerText = data.userid;
+}
+    
     if (dp) {
       dp.src = data.photo;
     }
