@@ -73,7 +73,8 @@ async function login() {
       name: user.displayName,
       email: user.email,
       photo: user.photoURL,
-      bio: "Using Trivedi Connect 🚀"
+      bio: "Using Trivedi Connect"
+      userid: user.email.split("@")[0] + "_connect.trivedi"
     });
 
     loadProfile();
