@@ -102,7 +102,28 @@ window.onload = () => {
       if (e.key === "Enter") {
         sendMessage();
       }
+// 🔥 ATTACH MENU
+const attachBtn =
+  document.getElementById("attachBtn");
 
+const attachMenu =
+  document.getElementById("attachMenu");
+
+attachBtn.addEventListener("click", () => {
+
+  if (
+    attachMenu.style.display === "flex"
+  ) {
+
+    attachMenu.style.display = "none";
+
+  } else {
+
+    attachMenu.style.display = "flex";
+
+  }
+
+});
     });
 
   // CHAT ACTIVE EFFECT
