@@ -102,11 +102,43 @@
         >
 
         <!-- 🔥 EXTRA -->
-        <label class="icon-btn">
-  ➕
-  <input type="file" id="fileInput" hidden>
-</label>
+        
+<div class="attach-wrapper">
 
+  <button class="icon-btn" id="attachBtn">
+    ➕
+  </button>
+
+  <div class="attach-menu" id="attachMenu">
+
+    <label>
+      📷 Photo
+      <input type="file" accept="image/*" hidden>
+    </label>
+
+    <label>
+      🎥 Video
+      <input type="file" accept="video/*" hidden>
+    </label>
+
+    <label>
+      🎵 Audio
+      <input type="file" accept="audio/*" hidden>
+    </label>
+
+    <label>
+      📄 PDF
+      <input type="file" accept=".pdf" hidden>
+    </label>
+
+    <label>
+      📁 File
+      <input type="file" hidden>
+    </label>
+
+  </div>
+
+</div>
       </div>
 
     </div>
