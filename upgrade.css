@@ -262,4 +262,48 @@
 .attach-menu label:hover {
   background: rgba(255,255,255,0.08);
 }
-  
+
+
+
+
+/* 🔥 MOBILE INPUT FIX */
+.input-box {
+  position: sticky;
+  bottom: 0;
+  z-index: 100;
+}
+
+/* 🔥 BUTTON SIZE FIX */
+.send-btn,
+.icon-btn {
+  min-width: 42px;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🔥 INPUT HEIGHT FIX */
+.input-box input {
+  height: 40px;
+}
+
+/* 🔥 MOBILE SCREEN FIX */
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .chat-box {
+    width: 100%;
+    flex: 1;
+  }
+
+}
