@@ -102,29 +102,35 @@ window.onload = () => {
       if (e.key === "Enter") {
         sendMessage();
       }
-// 🔥 ATTACH MENU
-const attachBtn =
-  document.getElementById("attachBtn");
 
-const attachMenu =
-  document.getElementById("attachMenu");
+    });
 
-attachBtn.addEventListener("click", () => {
+  // 🔥 ATTACH MENU
+  const attachBtn =
+    document.getElementById("attachBtn");
 
-  if (
-    attachMenu.style.display === "flex"
-  ) {
+  const attachMenu =
+    document.getElementById("attachMenu");
 
-    attachMenu.style.display = "none";
+  if (attachBtn && attachMenu) {
 
-  } else {
+    attachBtn.addEventListener("click", () => {
 
-    attachMenu.style.display = "flex";
+      if (
+        attachMenu.style.display === "flex"
+      ) {
+
+        attachMenu.style.display = "none";
+
+      } else {
+
+        attachMenu.style.display = "flex";
+
+      }
+
+    });
 
   }
-
-});
-    });
 
   // CHAT ACTIVE EFFECT
   document.querySelectorAll(".chat-list").forEach(item => {
@@ -142,6 +148,7 @@ attachBtn.addEventListener("click", () => {
   });
 
 };
+
 
 // 🔥 REALTIME MESSAGES
 const q = query(
