@@ -5,7 +5,7 @@ body {
   background: linear-gradient(135deg, #0b1220, #1e293b);
   color: white;
   animation: fadeIn 0.8s ease;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* 🔥 HEADER */
