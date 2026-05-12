@@ -307,3 +307,92 @@
   }
 
 }
+
+
+
+
+
+/* 🔥 GLOBAL SMOOTHNESS */
+* {
+  box-sizing: border-box;
+}
+
+/* 🔥 BODY FIX */
+body {
+  overflow: hidden;
+}
+
+/* 🔥 SIDEBAR SCROLL */
+.sidebar {
+  overflow-y: auto;
+}
+
+/* 🔥 CHAT AREA */
+.chat-box {
+  overflow: hidden;
+}
+
+/* 🔥 MESSAGE AREA */
+.messages {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* 🔥 INPUT SAFE AREA */
+.input-box {
+  background: rgba(15,23,42,0.95);
+}
+
+/* 🔥 INPUT FIELD */
+.input-box input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+/* 🔥 BUTTON CLEAN */
+.send-btn,
+.icon-btn {
+  border: none;
+  cursor: pointer;
+}
+
+/* 🔥 ATTACH MENU FIX */
+.attach-menu {
+  z-index: 999;
+}
+
+/* 🔥 WELCOME SCREEN MOBILE */
+@media (max-width: 768px) {
+
+  .welcome-title {
+    font-size: 34px;
+  }
+
+  .welcome-subtitle {
+    font-size: 13px;
+  }
+
+  .loading-bar {
+    width: 180px;
+  }
+
+}
+
+/* 🔥 ULTRA SMALL DEVICES */
+@media (max-width: 480px) {
+
+  .sidebar {
+    padding: 8px;
+  }
+
+  .message {
+    max-width: 80%;
+  }
+
+  .input-box {
+    padding: 8px;
+  }
+
+}
+
