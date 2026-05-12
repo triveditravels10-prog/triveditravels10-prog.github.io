@@ -289,25 +289,26 @@
 }
 
 /* 🔥 MOBILE SCREEN FIX */
+
 @media (max-width: 768px) {
 
-  .container {
-    flex-direction: column;
-    height: 100vh;
-  }
-
   .sidebar {
-    width: 100%;
-    height: auto;
+    width: 32%;
   }
 
   .chat-box {
-    width: 100%;
-    flex: 1;
+    width: 68%;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  .message {
+    max-width: 80%;
   }
 
 }
-
 
 
 
