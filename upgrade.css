@@ -397,3 +397,64 @@ body {
 
 }
 
+
+
+
+///
+/* 🔥 PREMIUM INPUT BAR */
+.input-box {
+  background: rgba(15,23,42,0.75);
+  backdrop-filter: blur(18px);
+
+  border-top: 1px solid rgba(255,255,255,0.05);
+
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  position: sticky;
+  bottom: 0;
+}
+
+/* 🔥 INPUT FIELD */
+.input-box input {
+
+  flex: 1;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+  border-radius: 25px;
+
+  padding: 12px 16px;
+
+  color: white;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+/* ✨ INPUT FOCUS */
+.input-box input:focus {
+
+  border-color: #38bdf8;
+
+  box-shadow:
+    0 0 10px rgba(56,189,248,0.2);
+
+}
+
+/*  ROUND BUTTONS */
+.send-btn,
+.icon-btn {
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+}
