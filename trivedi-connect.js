@@ -56,7 +56,8 @@ async function sendMessage() {
     text: msg,
     time: Date.now(),
     sender: auth.currentUser.uid,
-    name: auth.currentUser.displayName
+    name: auth.currentUser.displayName,
+    seen: false
   });
 }
 
