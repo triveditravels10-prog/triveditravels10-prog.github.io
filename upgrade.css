@@ -479,3 +479,14 @@ body {
   }
 
 }
+
+
+//**//
+/* 🔥 MOBILE SEARCH FIX */
+@media (max-width: 768px) {
+
+  .search-box {
+    display: none;
+  }
+
+}
