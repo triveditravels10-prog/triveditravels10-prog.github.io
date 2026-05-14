@@ -194,7 +194,10 @@ onSnapshot(q, (snapshot) => {
     messageDiv.innerHTML = `
       <strong>${data.name}</strong><br>
       ${data.text}
-      <div class="time">${time}</div>
+      <div class="time">
+  ${time}
+  ${data.seen ? "✓✓" : "✓"}
+</div>
     `;
 
     // 🔥 LONG PRESS DELETE
