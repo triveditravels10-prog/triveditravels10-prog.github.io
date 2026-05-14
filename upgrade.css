@@ -490,3 +490,64 @@ body {
   }
 
 }
+
+
+
+
+//**//
+/* 🔥 TOP HEADER BUTTONS */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ✨ TOP ICON BUTTON */
+.top-btn {
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.05);
+
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+
+}
+
+/*  HOVER */
+.top-btn:hover {
+
+  background: rgba(56,189,248,0.15);
+
+  transform: translateY(-2px);
+
+}
+
+/* 🔥 LOGIN BUTTON */
+.login-btn {
+
+  border: none;
+
+  background:
+    linear-gradient(135deg,#38bdf8,#0ea5e9);
+
+  color: black;
+
+  padding: 10px 16px;
+
+  border-radius: 12px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+}
