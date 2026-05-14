@@ -400,7 +400,7 @@ body {
 
 
 
-///
+/**/
 /* 🔥 PREMIUM INPUT BAR */
 .input-box {
   background: rgba(15,23,42,0.75);
@@ -456,5 +456,26 @@ body {
   height: 45px;
 
   border-radius: 50%;
+
+}
+
+
+/**/
+/* ✨ MESSAGE POP ANIMATION */
+.message {
+  animation: popMessage 0.25s ease;
+}
+
+@keyframes popMessage {
+
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 
 }
