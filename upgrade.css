@@ -551,3 +551,13 @@ body {
   cursor: pointer;
 
 }
+
+
+
+
+
+
+/* 🔥 APP HIDDEN BEFORE LOGIN */
+#mainApp {
+  display: none;
+}
