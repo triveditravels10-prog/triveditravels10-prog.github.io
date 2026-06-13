@@ -567,3 +567,57 @@ body {
 #mainApp{
 display:block !important;
 }
+
+
+
+
+                    /* ===== TRIVEDI CONNECT FIX ===== */
+
+#mainApp{
+  display:block !important;
+}
+
+body{
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+.container{
+  min-height:calc(100vh - 120px);
+  height:auto;
+}
+
+.chat-box{
+  display:flex;
+  flex-direction:column;
+  overflow:visible;
+}
+
+.messages{
+  flex:1;
+  overflow-y:auto;
+}
+
+.input-box{
+  position:relative !important;
+  bottom:auto !important;
+  width:100%;
+}
+
+@media (max-width:768px){
+
+  .container{
+    flex-direction:column;
+    height:auto;
+  }
+
+  .sidebar{
+    width:100%;
+  }
+
+  .chat-box{
+    width:100%;
+    min-height:70vh;
+  }
+
+}
