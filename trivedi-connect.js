@@ -293,3 +293,32 @@ if (userid) {
   }
 
 }
+
+
+
+// ⚙️ SETTINGS TOGGLE
+
+const settingsBtn =
+document.getElementById("settingsBtn");
+
+const settingsPanel =
+document.getElementById("settingsPanel");
+
+if(settingsBtn && settingsPanel){
+
+settingsBtn.addEventListener("click",()=>{
+
+if(settingsPanel.style.display==="block"){
+
+settingsPanel.style.display="none";
+
+}else{
+
+settingsPanel.style.display="block";
+
+}
+
+});
+
+}
+
