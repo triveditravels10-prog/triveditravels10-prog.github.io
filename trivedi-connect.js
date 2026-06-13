@@ -322,3 +322,32 @@ settingsPanel.style.display="block";
 
 }
 
+
+
+
+
+// ⚙️ SETTINGS PANEL CLOSE ON OUTSIDE CLICK
+
+document.addEventListener("click", (e) => {
+
+  const panel =
+    document.getElementById("settingsPanel");
+
+  const settingsBtn =
+    document.getElementById("settingsBtn");
+
+  if (!panel || !settingsBtn) return;
+
+  if (
+    !panel.contains(e.target) &&
+    !settingsBtn.contains(e.target)
+  ) {
+
+    panel.style.display = "none";
+
+  }
+
+});
+
+
+
